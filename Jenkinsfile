@@ -20,14 +20,16 @@ pipeline {
 		}
 			
 	}
-	
+
 	post {
 		always {
-			echo 'Iam awesome, I run always'
+			echo 'Iam awesome I run always'
 		}
+
 		Success {
 			echo 'I run when you are successful'
 		}
+
 		failure {
 			echo 'I run when you are fail'
 		}
