@@ -2,11 +2,11 @@
 //DECLARATIVE
 pipeline {
 	//agent any
-	agent { docker { image 'maven:3.6.3'}}
+	agent { docker { image 'rcschandrasekhar/hello-world-nodejs:0.0.2.RELEASE'}}
 	stages {
 		stage ( 'Build') {
 			steps {
-				sh 'mvn --version'
+				
 				echo "Build"			
 			}
 		}
