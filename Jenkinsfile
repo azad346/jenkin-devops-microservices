@@ -26,7 +26,7 @@ pipeline {
 			echo 'Iam awesome I run always'
 		}
 
-		Success {
+		success {
 			echo 'I run when you are successful'
 		}
 
