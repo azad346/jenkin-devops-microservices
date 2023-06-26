@@ -1,13 +1,18 @@
 
 //DECLARATIVE
 pipeline {
-	//agent any
-	agent { docker { image 'maven:3.8.8'}}
+	agent any
+	//agent { docker { image 'maven:3.8.8'}}
 	stages {
 		stage ( 'Build') {
 			steps {
-				sh "maven --version"
-				echo "Build"			
+				//sh "maven --version"
+				echo "Build"
+				echo "PATH - $env.PATH"
+				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
+				echo " JOB_NAME - $env.JOB_NAME"
+				echo "BUILD_TAG - $env.BUILD_TAG"
+				echo "BUILD_URL - $env.BUILD_URL"			
 			}
 		}
 		stage ( 'Test') {
